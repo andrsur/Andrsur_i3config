@@ -1,0 +1,47 @@
+# ~/.config/alacritty/alacritty.toml
+[window]
+opacity = 0.60
+decorations = "Full"
+
+[window.padding]
+x = 18
+y = 16
+
+[font]
+size = 12
+
+[font.normal]
+family = "AnonymiceProNerdFont"
+style = "Regular"
+
+[font.bold]
+family = "AnonymiceProNerdFont"
+style = "Bold"
+
+[font.italic]
+family = "AnonymiceProNerdFont"
+style = "Italic"
+
+[colors.primary]
+background = '#0a0a0a'
+foreground = '#dddddd'
+
+[colors.normal]
+black = '#000000'
+red = '#cc0403'
+green = '#19cb00'
+yellow = '#cecb00'
+blue = '#0d73cc'
+magenta = '#cb1ed1'
+cyan = '#0dcdcd'
+white = '#dddddd'
+
+[colors.bright]
+black = '#666666'
+red = '#ff0000'
+green = '#00ff00'
+yellow = '#ffff00'
+blue = '#0000ff'
+magenta = '#ff00ff'
+cyan = '#00ffff'
+white = '#ffffff'

@@ -14,6 +14,10 @@ require('packer').startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-lua/plenary.nvim'
+    
+    -- ДОБАВЛЕНО: Файловое дерево и иконки
+    use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons'
 end)
 
 -- Базовые настройки NeoVim
@@ -27,6 +31,10 @@ vim.opt.termguicolors = true
 vim.opt.signcolumn = 'yes'
 vim.opt.cursorline = true
 
+-- ДОБАВЛЕНО: Отключение стандартного файлового менеджера (важно для nvim-tree)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- Убрать тильды на пустых строках
 vim.opt.fillchars = { eob = ' ' }
 
@@ -37,6 +45,36 @@ vim.api.nvim_set_hl(0, 'NonText', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'LineNr', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'Folded', { bg = 'none' })
 vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'none' })
+
+-- ДОБАВЛЕНО: Настройка файлового дерева nvim-tree
+require("nvim-tree").setup({
+    view = {
+        width = 35,
+        side = "right", -- панель справа как в VSCode
+    },
+    renderer = {
+        group_empty = true,
+        icons = {
+            glyphs = {
+                folder = {
+                    arrow_closed = "▶",
+                    arrow_open = "▼",
+                },
+            },
+        },
+    },
+    filters = {
+        dotfiles = false, -- показывать скрытые файлы
+    },
+    actions = {
+        open_file = {
+            quit_on_open = true, -- закрыть дерево после открытия файла
+        },
+    },
+})
+
+-- ДОБАВЛЕНО: Горячая клавиша для дерева файлов
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file tree' })
 
 -- Mason настройка
 require('mason').setup()

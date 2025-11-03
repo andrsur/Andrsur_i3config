@@ -35,6 +35,7 @@ bindsym Print exec --no-startup-id flameshot gui
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+exec --no-startup-id autotiling
 
 for_window [class=".*"] border pixel 1
 for_window [class=".*"] title_format ""

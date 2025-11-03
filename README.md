@@ -5,6 +5,12 @@
 ```
 yay -S picom-ftlabs-git
 ```
+
+* install autotiling using aur helper
+```
+yay -S autotiling
+```
+
 * install depences
 ```
 sudo pacman -Sy alacritty i3-gaps feh polybar rofi

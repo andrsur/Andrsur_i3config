@@ -1,6 +1,6 @@
 # ~/.config/alacritty/alacritty.toml
 [window]
-opacity = 0.45
+opacity = 0.60
 decorations = "Full"
 
 [window.padding]
@@ -23,7 +23,7 @@ family = "AnonymiceProNerdFont"
 style = "Italic"
 
 [colors.primary]
-background = '#1a1a1a'
+background = '#0f0f0f'
 foreground = '#dddddd'
 
 [colors.normal]

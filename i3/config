@@ -26,7 +26,7 @@ exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
-exec --no-startup-id feh --bg-scale /home/andrsur/.backgrounds/stalker.jpg
+exec --no-startup-id feh --bg-scale /home/andrsur/.backgrounds/bg.jpg
 
 bindsym Print exec --no-startup-id flameshot gui
 
